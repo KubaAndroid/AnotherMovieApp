@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+
+    <color name="primary">#1A1A1A</color>
+    <!--status bar-->
+    <color name="primaryVariant">#232323</color>
+
+    <color name="secondary">#FF0FDFC5</color>
+    <color name="secondaryVariant">#FF018786</color>
+
+    <color name="accent">#FF6859</color>
+    <color name="accentSecondary">#FFCF44</color>
+
+    <color name="purple">#B15DFF</color>
+    <color name="blue">#72DEFF</color>
+
+    <color name="background">#121212</color>
+    <color name="backgroundLight">#232323</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="error">#FFB00020</color>
+
+    <color name="dark_main">#1A1A1A</color>
+    <color name="dark_main_dark">#121212</color>
+    <color name="dark_main_light">#2B2b2b</color>
+    <color name="dark_main_lighter">#4E4E4E</color>
+    <color name="dark_bg_bottom">#2d2d2d</color>
+
+    <color name="dark_font_main">#ccc</color>
+    <color name="dark_font_light">#e5e5e5</color>
+    <color name="dark_font_dark">#aaa</color>
+
+    <color name="rating_good">#00cc55</color>
+    <color name="rating_average">#dddd00</color>
+    <color name="rating_bad">#cc4400</color>
+</resources>

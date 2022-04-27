@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_gradient"
+        tools:context=".ui.my_lists.MyListsFragment">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_my_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@android:color/transparent"
+            android:elevation="1dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabTextColor="@color/dark_font_dark"
+            app:tabIndicatorColor="@color/blue"
+            app:tabSelectedTextColor="@color/blue" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vp_my_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabs_my_list" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

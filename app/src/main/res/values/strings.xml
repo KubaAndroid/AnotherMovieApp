@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Another Movie Search App</string>
+    <string name="str_movie_rating">%1$f/10</string>
+    <string name="str_movie_title_date">%1$s (%2$s)</string>
+
+    <string name="str_snack_added_towatch">The movie was added to watchlist</string>
+    <string name="str_snack_removed_towatch">The movie was removed from watchlist</string>
+    <string name="str_snack_added_fav">The movie was added to favorites</string>
+    <string name="str_snack_removed_fav">The movie was removed from favorites</string>
+
+    <string name="str_snack_error">An error occurred</string>
+    <string name="ok">OK</string>
+    <string name="custom_alert_message">Custom alert message</string>
+    <string name="alert_title">Alert Title</string>
+    <string name="selected_movie">Selected movie</string>
+    <string name="now_playing">Now playing</string>
+    <string name="currently_in_theaters">Currently in theaters</string>
+    <string name="hello">Hello!</string>
+    <string name="search_tmdb_for_movies">Search tmdb for movies:</string>
+    <string name="title_of_the_movie">Title of the movie that is too long to fit in one line</string>
+    <string name="year">Year</string>
+    <string name="rating">rating</string>
+    <string name="overview">Overview</string>
+    <string name="movie_title">Movie title</string>
+    <string name="_7_0">7.0</string>
+    <string name="movie_description">Movie description</string>
+    <string name="search">Search</string>
+    <string name="popular">Popular</string>
+    <string name="my_lists">My Lists</string>
+    <string name="watchlist">Watchlist</string>
+    <string name="favorite">Favorite</string>
+
+</resources>

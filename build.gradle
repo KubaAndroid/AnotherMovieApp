@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlinVersion = "1.5.10"
+        navigationVersion = '2.3.0'
+        retrofitVersion = '2.9.0'
+        glideVersion = '4.11.0'
+        pagingVersion = '3.0.0-alpha05'
+        roomVersion = "2.3.0"
+        hiltVersion = '2.38.1'
+        hiltCompilerVersion = '2.37'
+        hiltViewModelVersion = '1.0.0-alpha03'
+        viewPagerVersion = '1.0.0'
+        lifecycleVersion = '2.2.0'
+    }
+
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
