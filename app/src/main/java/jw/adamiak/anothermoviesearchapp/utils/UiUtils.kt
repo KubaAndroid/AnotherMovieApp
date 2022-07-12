@@ -19,6 +19,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 object UiUtils {
+
 	fun toggleProgressBar(pb: ProgressBar, show: Boolean){
 		CoroutineScope(Dispatchers.Main).launch {
 			if(show){
@@ -32,6 +33,7 @@ object UiUtils {
 	fun setImage(iv: ImageView, uri: Uri){
 		Glide.with(iv)
 			.load(uri)
+			.placeholder(R.drawable.ic_movies)
 			.into(iv)
 	}
 

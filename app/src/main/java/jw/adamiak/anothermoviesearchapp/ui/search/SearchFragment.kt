@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import jw.adamiak.anothermoviesearchapp.R
-import jw.adamiak.anothermoviesearchapp.data.adapter.SearchPagerAdapter
+import jw.adamiak.anothermoviesearchapp.ui.adapter.SearchPagerAdapter
 import jw.adamiak.anothermoviesearchapp.data.model.Movie
 import jw.adamiak.anothermoviesearchapp.databinding.FragmentSearchBinding
 import jw.adamiak.anothermoviesearchapp.utils.ApiUtils.isUserOnline
@@ -19,15 +19,18 @@ import jw.adamiak.anothermoviesearchapp.utils.UiUtils.hideKeyboard
 import jw.adamiak.anothermoviesearchapp.utils.UiUtils.toggleProgressBar
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import java.lang.IllegalArgumentException
 
 @AndroidEntryPoint
 class SearchFragment: Fragment(R.layout.fragment_search), SearchPagerAdapter.OnMovieClickListener {
+
 
 	private lateinit var binding: FragmentSearchBinding
 	private lateinit var linearLayoutManager: LinearLayoutManager
 	private lateinit var moviesSearchAdapter: SearchPagerAdapter
 
 	private val viewModel by viewModels<SearchViewModel>()
+
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)

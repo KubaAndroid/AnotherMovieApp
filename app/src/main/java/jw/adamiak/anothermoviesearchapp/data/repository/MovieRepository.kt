@@ -43,8 +43,9 @@ class MovieRepository @Inject constructor (val api: TheMovieDbApi, private val d
 		} catch (e: Exception) {
 			DataState.Error("Error occurred ${e.message}")
 		}
-
 	}
+
+
 
 	suspend fun deleteMovieFromFavorites(movie: Movie): DataState {
 		return try {

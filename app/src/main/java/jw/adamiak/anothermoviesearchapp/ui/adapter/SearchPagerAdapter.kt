@@ -1,20 +1,17 @@
-package jw.adamiak.anothermoviesearchapp.data.adapter
+package jw.adamiak.anothermoviesearchapp.ui.adapter
 
 import android.content.Context
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import jw.adamiak.anothermoviesearchapp.R
 import jw.adamiak.anothermoviesearchapp.data.model.Movie
 import jw.adamiak.anothermoviesearchapp.databinding.MovieListItemBinding
 import jw.adamiak.anothermoviesearchapp.utils.ApiUtils
+import jw.adamiak.anothermoviesearchapp.utils.UiUtils.setImage
 import jw.adamiak.anothermoviesearchapp.utils.UiUtils.setRatingColor
 
 class SearchPagerAdapter(val context: Context, val clickListener: OnMovieClickListener):
@@ -48,30 +45,25 @@ class SearchPagerAdapter(val context: Context, val clickListener: OnMovieClickLi
 				tvListRating.setTextColor(ContextCompat.getColor(context, setRatingColor(movie.vote_average)))
 				tvListOverview.text = movie.overview
 				root.setOnClickListener { clickListener.onMovieClicked(movie) }
-				setImage((ApiUtils.IMG_URL_500_PREFIX + movie.poster_path).toUri(), binding.ivListPoster)
+				setImage(binding.ivListPoster, (ApiUtils.IMG_URL_500_PREFIX + movie.poster_path).toUri())
 			}
 		}
 
-		private fun setImage(uri: Uri?, iv: ImageView) {
-			Glide.with(context)
-				.load(uri)
-				.placeholder(R.drawable.ic_movies)
-				.error(R.drawable.ic_movies)
-				.into(iv)
-		}
 	}
 
 	interface OnMovieClickListener {
 		fun onMovieClicked(movie: Movie)
 	}
-}
 
-private class MoviesDiffCallback: DiffUtil.ItemCallback<Movie>(){
-	override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-		return oldItem.id == newItem.id
+	private class MoviesDiffCallback: DiffUtil.ItemCallback<Movie>(){
+		override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+			return oldItem.id == newItem.id
+		}
+
+		override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+			return oldItem == newItem
+		}
 	}
 
-	override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-		return oldItem == newItem
-	}
 }
+

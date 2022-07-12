@@ -8,6 +8,7 @@ import jw.adamiak.anothermoviesearchapp.data.api.TheMovieDbApi
 import jw.adamiak.anothermoviesearchapp.data.model.Movie
 import jw.adamiak.anothermoviesearchapp.data.repository.MovieRepository
 import kotlinx.coroutines.flow.Flow
+import java.lang.IllegalArgumentException
 import javax.inject.Inject
 
 @HiltViewModel

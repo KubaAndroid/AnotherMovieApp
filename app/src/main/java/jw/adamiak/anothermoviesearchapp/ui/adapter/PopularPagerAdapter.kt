@@ -1,4 +1,4 @@
-package jw.adamiak.anothermoviesearchapp.ui.search
+package jw.adamiak.anothermoviesearchapp.ui.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import jw.adamiak.anothermoviesearchapp.data.model.Movie
 import jw.adamiak.anothermoviesearchapp.databinding.MovieListPopularItemBinding
 import jw.adamiak.anothermoviesearchapp.utils.ApiUtils
-import jw.adamiak.anothermoviesearchapp.utils.UiUtils
 import jw.adamiak.anothermoviesearchapp.utils.UiUtils.setImage
 import jw.adamiak.anothermoviesearchapp.utils.UiUtils.setRatingColor
 
@@ -54,14 +53,15 @@ class PopularPagerAdapter(val context: Context, val clickListener: OnMovieClickL
 		fun onMovieClicked(movie: Movie)
 	}
 
-}
+	private class MoviesDiffCallback: DiffUtil.ItemCallback<Movie>(){
+		override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+			return oldItem.id == newItem.id
+		}
 
-private class MoviesDiffCallback: DiffUtil.ItemCallback<Movie>(){
-	override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-		return oldItem.id == newItem.id
+		override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
+			return oldItem == newItem
+		}
 	}
 
-	override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-		return oldItem == newItem
-	}
 }
+

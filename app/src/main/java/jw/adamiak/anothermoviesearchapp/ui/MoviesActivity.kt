@@ -1,7 +1,10 @@
 package jw.adamiak.anothermoviesearchapp.ui
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -33,4 +36,5 @@ class MoviesActivity : AppCompatActivity() {
 		bottomNav = findViewById(R.id.bottom_navigation)
 		NavigationUI.setupWithNavController(bottomNav, navigation)
 	}
+
 }

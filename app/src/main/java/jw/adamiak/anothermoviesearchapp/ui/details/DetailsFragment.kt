@@ -103,16 +103,22 @@ class DetailsFragment: Fragment(R.layout.fragment_details) {
 
 	private fun checkFavorite() {
 			if(isFav) {
+				// TODO: delete pic locally, set local_poster_path
 				viewModel.deleteMovieFromFavorites(movie)
 			} else {
+				// TODO: save pic locally, set local_poster_path
+//					viewModel.savePicture(movie, requireActivity())
 				viewModel.insertMovieToFavorites(movie)
 		}
 	}
 
 	private fun checkWatchlist() {
 		if(isWatch) {
+			// TODO: delete pic locally, set local_poster_path
 			viewModel.deleteMovieFromWatchList(movie)
 		} else {
+			// TODO: delete pic locally, set local_poster_path
+//			viewModel.savePicture(movie, requireActivity())
 			viewModel.insertMovieToWatch(movie)
 		}
 	}

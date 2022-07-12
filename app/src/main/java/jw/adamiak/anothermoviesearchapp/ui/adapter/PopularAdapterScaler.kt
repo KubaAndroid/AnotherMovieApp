@@ -4,9 +4,8 @@ import android.content.Context
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class PopularAdapterScaler: LinearLayoutManager {
-	constructor(context: Context, orientation: Int, reverseLayout: Boolean):
-		super(context, orientation, reverseLayout)
+class PopularAdapterScaler(context: Context, orientation: Int, reverseLayout: Boolean) :
+	LinearLayoutManager(context, orientation, reverseLayout) {
 
 	override fun checkLayoutParams(lp: RecyclerView.LayoutParams?): Boolean {
 		lp?.width = (width / 1.5).toInt()

@@ -7,10 +7,9 @@ import jw.adamiak.anothermoviesearchapp.data.model.Movie
 
 @Database(
 	entities = [Movie::class],
-	version = 2,
+	version = 3,
 	exportSchema = false
 )
-@TypeConverters(MovieTypeConverters::class)
 abstract class MoviesDatabase: RoomDatabase() {
 	abstract val dao: MoviesDao
 }

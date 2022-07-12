@@ -2,22 +2,19 @@ package jw.adamiak.anothermoviesearchapp.ui.popular
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
 import jw.adamiak.anothermoviesearchapp.R
 import jw.adamiak.anothermoviesearchapp.data.model.Movie
 import jw.adamiak.anothermoviesearchapp.databinding.FragmentPopularBinding
 import jw.adamiak.anothermoviesearchapp.ui.adapter.PopularAdapterScaler
-import jw.adamiak.anothermoviesearchapp.ui.search.PopularPagerAdapter
+import jw.adamiak.anothermoviesearchapp.ui.adapter.PopularPagerAdapter
 import jw.adamiak.anothermoviesearchapp.utils.ApiUtils
-import jw.adamiak.anothermoviesearchapp.utils.UiUtils
 import jw.adamiak.anothermoviesearchapp.utils.UiUtils.showAlert
 import jw.adamiak.anothermoviesearchapp.utils.UiUtils.toggleProgressBar
 import kotlinx.coroutines.launch

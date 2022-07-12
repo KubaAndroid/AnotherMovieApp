@@ -1,5 +1,12 @@
 package jw.adamiak.anothermoviesearchapp.ui.details
 
+import android.app.Activity
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.ImageDecoder
+import android.os.Build
+import android.provider.MediaStore
+import androidx.core.net.toUri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -12,7 +19,10 @@ import jw.adamiak.anothermoviesearchapp.data.repository.MovieRepository
 import jw.adamiak.anothermoviesearchapp.utils.ApiUtils.IMG_URL_500_PREFIX
 import jw.adamiak.anothermoviesearchapp.utils.DataState
 import kotlinx.coroutines.launch
+import java.io.*
 import java.lang.Thread.sleep
+import java.net.HttpURLConnection
+import java.net.URL
 import javax.inject.Inject
 
 @HiltViewModel
